@@ -26,7 +26,7 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 5) Choose the trigger as a S3 PUT with the bucket (from step 1) where we will be uploading our YAML file.
 6) Launch the Lambda function.
 7) On the top right of code click on "Upload from" and click on .zip file. Upload **my-deployment-package.zip**.
-8) After uploading go to lambda_function.py and delete the code which is there and paste the code in the file **ec2launch_twovolumes_twousers.py**.
+8) After uploading go to lambda_function.py and **delete the code** which is there and **paste the code** in the file **ec2launch_twovolumes_twousers.py**.
 9) We are uploading the zip file because we want lambda to handle yaml data.
 10) Click on deploy as you have just changed the code.
 11) Create two SSH Key pairs and get their public keys and keep them in the YAML file.
