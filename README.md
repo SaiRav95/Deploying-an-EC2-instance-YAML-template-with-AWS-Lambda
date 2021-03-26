@@ -8,7 +8,7 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 
 # Things to know 
 
-1) I used the lambda function, bucket, and the deployment of the EC2 instances in us-west-1 region.
+1) I used the lambda function, bucket, and the deployment of the EC2 instances in **us-west-1** region.
 2) Did not create a new VPC I used the dafault one.
 3) In the below pic is where I got the AMI and I kept that ID in the code (I got it from "Launch Instances" in the EC2 console).
 
@@ -22,11 +22,11 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 1) Create a S3 bucket where we will be uploading our YAML file.
 2) Create a lambda function with "Author from scratch" and choose the language as Python 3.8
 3) Increase the timeout from the default 3 sec to 5 minutes (The code will take longer than 3 seconds but not longer than 1 - 2 minutes to run).
-4) Create an IAM role which provides AmazonEC2FullAccess, AmazonS3FullAccess, and lambdabasicaccess.json.
+4) Create an IAM role which provides AmazonEC2FullAccess, AmazonS3FullAccess, and **lambdabasicaccess.json**.
 5) Choose the trigger as a S3 PUT with the bucket (from step 1) where we will be uploading our YAML file.
 6) Launch the Lambda function.
-7) On the top right of code click on "Upload from" and click on .zip file. Upload my-deployment-package.zip.
-8) After uploading go to lambda_function.py and delete the code which is there and paste the code in the file (--------------).
+7) On the top right of code click on "Upload from" and click on .zip file. Upload **my-deployment-package.zip**.
+8) After uploading go to lambda_function.py and delete the code which is there and paste the code in the file **ec2launch_twovolumes_twousers.py**.
 9) We are uploading the zip file because we want lambda to handle yaml data.
 10) Click on deploy as you have just changed the code.
 11) Create two SSH Key pairs and get their public keys and keep them in the YAML file.
