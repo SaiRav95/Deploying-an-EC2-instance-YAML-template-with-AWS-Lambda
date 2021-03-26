@@ -10,10 +10,11 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 
 1) I used the lambda function, bucket, and the deployment of the EC2 instances in us-west-1 region.
 2) Did not create a new VPC I used the dafault one.
-3) I used an existing key pair for the creation of the instance. (In the code it is called testfefe).
-4) ![Github_AMI_Picture](https://user-images.githubusercontent.com/44057058/112569496-a2d16f00-8dba-11eb-88af-8af491af6ed6.png)
+3) In the below pic is where I got the AMI and I kept that ID in the code.
 
+![Github_AMI_Picture](https://user-images.githubusercontent.com/44057058/112569496-a2d16f00-8dba-11eb-88af-8af491af6ed6.png)
 
+4) I used an existing key pair for the creation of the instance. (In the code it is called testfefe).
 
 
 # Steps to do
