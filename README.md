@@ -10,7 +10,9 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 
 1) I used the lambda function, bucket, and the deployment of the EC2 instances in us-west-1 region.
 2) Did not create a new VPC I used the dafault one.
-3) 
+3) I used an existing key pair for the creation of the instance. (In the code it is called testfefe).
+4) ![Github_AMI_Picture](https://user-images.githubusercontent.com/44057058/112569496-a2d16f00-8dba-11eb-88af-8af491af6ed6.png)
+
 
 
 
@@ -25,6 +27,12 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 7) On the top right of code click on "Upload from" and click on .zip file. Upload my-deployment-package.zip.
 8) After uploading go to lambda_function.py and delete the code which is there and paste the code in the file (--------------).
 9) We are uploading the zip file because we want lambda to handle yaml data.
-10) 
+10) Click on deploy as you have just changed the code.
+11) Create two SSH Key pairs and get their public keys and keep them in the YAML file.
+12) Now our YAMl file is ready and the code is ready.
+13) Now upload the YAML file in the bucket which is the trigger for the lambda function we created.
+14) We can see that EC2 instance and the associated security group are created.
+15) We can see the user data in the ec2 instance in the instance settings and we can see that the two users (in my case user1 and user2) have been created.
+16) 
 
 
