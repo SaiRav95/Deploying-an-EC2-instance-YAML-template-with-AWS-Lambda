@@ -10,7 +10,7 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 
 1) I used the lambda function, bucket, and the deployment of the EC2 instances in us-west-1 region.
 2) Did not create a new VPC I used the dafault one.
-3) In the below pic is where I got the AMI and I kept that ID in the code.
+3) In the below pic is where I got the AMI and I kept that ID in the code (I got it from "Launch Instances" in the EC2 console).
 
 ![Github_AMI_Picture](https://user-images.githubusercontent.com/44057058/112569496-a2d16f00-8dba-11eb-88af-8af491af6ed6.png)
 
@@ -33,7 +33,9 @@ The code when invoked will create an EC2 instance with two volumes both EBS with
 12) Now our YAMl file is ready and the code is ready.
 13) Now upload the YAML file in the bucket which is the trigger for the lambda function we created.
 14) We can see that EC2 instance and the associated security group are created.
-15) We can see the user data in the ec2 instance in the instance settings and we can see that the two users (in my case user1 and user2) have been created.
-16) 
+15) We can see the user data in the EC2 instance in the instance settings and we can see that the two users (in my case user1 and user2) have been created.
+16) You can see that you can connect via EC2 connect using user1 or user2. 
+17) You can also connect via SSH and provide the pirvate SSH key for the user for authentication.
+18) You can read and write now.
 
 
